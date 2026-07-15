@@ -17,6 +17,7 @@
     .facility-details { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
     .facility-details li { font-size: 0.83rem; color: var(--ink); display: flex; align-items: baseline; gap: 0.4rem; }
     .facility-details li::before { content: '—'; color: var(--gold); font-weight: 600; flex-shrink: 0; }
+    .facility-badge { display: inline-block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); background: var(--gold-pale); padding: 0.25rem 0.6rem; margin-bottom: 0.75rem; }
 
     .placeholder-notice { background: var(--gold-pale); border-left: 4px solid var(--gold); padding: 1.25rem 1.5rem; margin: 2rem 0; font-size: 0.88rem; color: var(--brown); line-height: 1.6; }
     .placeholder-notice strong { display: block; margin-bottom: 0.25rem; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
@@ -42,7 +43,7 @@
   <div class="page-hero-inner">
     <div class="page-hero-kicker"><div class="page-hero-kicker-line"></div><span>Community Spaces</span></div>
     <h1>Our <em>Facilities</em></h1>
-    <p class="page-hero-sub">Spaces built for the community — available for events, gatherings, and more.</p>
+    <p class="page-hero-sub">Spaces built for the community — available for events, gatherings, and everyday enjoyment.</p>
   </div>
 </div>
 
@@ -51,42 +52,62 @@
     <div class="reveal">
       <div class="label-tag">What We Offer</div>
       <h2 class="editorial">Community <em>Spaces</em></h2>
-      <p class="facilities-intro">The Nauwigewauk Community Club maintains facilities for the benefit of the local community. Our hall and grounds are available for a range of events and gatherings.</p>
+      <p class="facilities-intro">The Nauwigewauk Community Club maintains grounds and facilities for the benefit of the local community, located at 36 Darlings Island Road. Our picnic shelter and grounds are available for a range of events and everyday use.</p>
     </div>
     <div class="placeholder-notice reveal">
       <strong>📋 For the Club Executive</strong>
-      Update the facility descriptions below with accurate details about the hall — dimensions, capacity, amenities, and any other spaces (parking, outdoor grounds, kitchen, etc.).
+      Update the facility descriptions below with accurate details — dimensions, capacity, amenities, hours, and seasonal availability where relevant.
     </div>
     <div class="facilities-grid">
       <div class="facility-card reveal">
-        <span class="facility-icon">🏛️</span>
-        <div class="facility-name">Community Hall</div>
-        <p class="facility-desc">The main hall is the heart of the club — a versatile space suitable for meetings, celebrations, and community events of all sizes.</p>
+        <span class="facility-icon">🏕️</span>
+        <div class="facility-name">Picnic Shelter</div>
+        <p class="facility-desc">A covered, open-air shelter on the grounds — a versatile space suitable for gatherings, celebrations, and community events of all sizes.</p>
         <ul class="facility-details">
           <li>[Capacity — add number of guests]</li>
           <li>[Dimensions — add floor size]</li>
-          <li>Tables and chairs included</li>
-          <li>[Add additional amenity]</li>
+          <li>Picnic tables included</li>
           <li>[Add additional amenity]</li>
         </ul>
       </div>
       <div class="facility-card reveal">
-        <span class="facility-icon">🍽️</span>
-        <div class="facility-name">Kitchen</div>
-        <p class="facility-desc">A functional kitchen available to hall renters for catering and food preparation during events.</p>
+        <span class="facility-icon">🛝</span>
+        <div class="facility-name">Community Playground</div>
+        <p class="facility-desc">A playground on the grounds for children and families to enjoy, open to the community year-round.</p>
         <ul class="facility-details">
-          <li>[Add kitchen details — stove, oven, fridge, etc.]</li>
-          <li>[Add any restrictions or requirements]</li>
-          <li>Available with hall rental</li>
+          <li>Free and open to the public</li>
+          <li>[Add age range / equipment details]</li>
+          <li>Adjacent to the picnic shelter</li>
+        </ul>
+      </div>
+      <div class="facility-card reveal">
+        <span class="facility-badge">Seasonal</span>
+        <span class="facility-icon">⛸️</span>
+        <div class="facility-name">Outdoor Skating Rink</div>
+        <p class="facility-desc">An outdoor rink open to the community during the winter months — a favourite local tradition.</p>
+        <ul class="facility-details">
+          <li>Open in winter, weather permitting</li>
+          <li>Free and open to the public</li>
+          <li>[Add hours / lighting details]</li>
+        </ul>
+      </div>
+      <div class="facility-card reveal">
+        <span class="facility-icon">🚲</span>
+        <div class="facility-name">Bicycle Pump Track</div>
+        <p class="facility-desc">A pump track on the grounds for cyclists of all ages and skill levels to ride and practice.</p>
+        <ul class="facility-details">
+          <li>Free and open to the public</li>
+          <li>[Add skill level / age recommendations]</li>
+          <li>Helmets recommended</li>
         </ul>
       </div>
       <div class="facility-card reveal">
         <span class="facility-icon">🌳</span>
         <div class="facility-name">Grounds &amp; Parking</div>
-        <p class="facility-desc">Ample outdoor space surrounding the hall, with on-site parking for guests.</p>
+        <p class="facility-desc">Ample outdoor space at 36 Darlings Island Road, with on-site parking for guests and visitors.</p>
         <ul class="facility-details">
           <li>[Add parking capacity]</li>
-          <li>[Describe outdoor space if applicable]</li>
+          <li>Home to the picnic shelter, playground, rink, and pump track</li>
           <li>Accessible entrance</li>
         </ul>
       </div>
@@ -107,19 +128,19 @@
 <section class="rental-section">
   <div class="container">
     <div class="reveal">
-      <div class="label-tag">Hall Rental</div>
-      <h2 class="editorial">Book the <em>Hall</em></h2>
+      <div class="label-tag">Shelter Rental</div>
+      <h2 class="editorial">Book the <em>Picnic Shelter</em></h2>
     </div>
     <div class="rental-grid">
       <div class="rental-info reveal">
-        <p>The community hall is available to rent for private and community events. Whether you're planning a family gathering, a meeting, or a local celebration, we'd love to host you.</p>
+        <p>The picnic shelter is available to rent for private and community events. Whether you're planning a family gathering, a birthday, or a local celebration, we'd love to host you.</p>
         <p>To check availability or discuss your needs, please get in touch with the executive. We'll do our best to accommodate your event.</p>
         <a href="contact.html" class="btn btn-gold" style="margin-top:0.5rem">Enquire About Booking</a>
       </div>
       <div class="rental-details reveal">
         <h3>Rental Information</h3>
-        <div class="rental-item"><span>Hall Rental Rate</span><span>[Add rate]</span></div>
-        <div class="rental-item"><span>Kitchen Access</span><span>[Included / Extra]</span></div>
+        <div class="rental-item"><span>Shelter Rental Rate</span><span>[Add rate]</span></div>
+        <div class="rental-item"><span>Picnic Tables</span><span>Included</span></div>
         <div class="rental-item"><span>Setup / Teardown</span><span>[Add info]</span></div>
         <div class="rental-item"><span>Minimum Booking</span><span>[Add info]</span></div>
         <div class="rental-item"><span>Alcohol Policy</span><span>[Add info]</span></div>
