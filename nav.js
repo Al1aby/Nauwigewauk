@@ -15,7 +15,7 @@
   const navHTML = `
   <nav>
     <a href="index.html" class="nav-brand">
-      <img class="nav-logo-img" src="NBCC_logo.png" alt="NCC Logo" />
+      <img class="nav-logo-img" src="NCC_logo.png" alt="NCC Logo" />
       <div class="nav-brand-text">Nauwigewauk<small>Community Club Inc.</small></div>
     </a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
@@ -26,7 +26,7 @@
   <div class="menu-overlay" id="menuOverlay">
     <div class="menu-overlay-top">
       <a href="index.html" class="nav-brand">
-        <img class="nav-logo-img" src="NBCC_logo.png" alt="NCC Logo" />
+        <img class="nav-logo-img" src="NCC_logo.png" alt="NCC Logo" />
         <div class="nav-brand-text">Nauwigewauk<small>Community Club Inc.</small></div>
       </a>
       <button class="menu-close" id="menuClose" aria-label="Close menu">&times;</button>
@@ -51,7 +51,7 @@
     </div>
   </div>
   <footer>
-    <img src="NBCC_logo.png" alt="NCC" />
+    <img src="NCC_logo.png" alt="NCC" />
     <div class="footer-text">© 2024 Nauwigewauk Community Club Inc. · Route 100, Southern New Brunswick, Canada</div>
     <div class="footer-links">
       <a href="history.html">Our History</a>
