@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Executive — Nauwigewauk Community Club</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .exec-section { background: var(--paper); }
+    .exec-intro { font-family: 'Lora', serif; font-size: 1.05rem; line-height: 1.85; color: #3a3025; max-width: 680px; margin-top: 1.25rem; }
+
+    .placeholder-notice { background: var(--gold-pale); border-left: 4px solid var(--gold); padding: 1.25rem 1.5rem; margin: 2rem 0; font-size: 0.88rem; color: var(--brown); line-height: 1.6; }
+    .placeholder-notice strong { display: block; margin-bottom: 0.25rem; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    .exec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--rule); border: 1px solid var(--rule); margin-top: 2.5rem; }
+    .exec-card { background: var(--cream); padding: 2.25rem 2rem; position: relative; overflow: hidden; transition: background 0.2s; }
+    .exec-card:hover { background: var(--gold-pale); }
+    .exec-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--navy); transition: background 0.2s; }
+    .exec-card:hover::before { background: var(--gold); }
+    .exec-role { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .exec-name { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--navy-dark); font-weight: 700; margin-bottom: 0.25rem; }
+    .exec-placeholder { font-size: 0.88rem; color: var(--muted); font-style: italic; }
+
+    /* Committee section */
+    .committee-section { background: var(--cream); }
+    .committee-section h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--navy-dark); margin: 2.5rem 0 1rem; }
+    .committee-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5px; background: var(--rule); border: 1px solid var(--rule); }
+    .committee-item { background: var(--cream); padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+    .committee-item:hover { background: var(--gold-pale); }
+    .ci-role { font-size: 0.82rem; font-weight: 600; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; }
+    .ci-name { font-family: 'Lora', serif; font-style: italic; color: var(--muted); font-size: 0.9rem; }
+
+    .volunteer-strip { background: var(--navy-dark); padding: 4rem 2rem; text-align: center; }
+    .volunteer-strip h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--cream); margin-bottom: 0.75rem; }
+    .volunteer-strip h2 em { font-style: italic; color: var(--gold-lt); }
+    .volunteer-strip p { font-family: 'Lora', serif; font-style: italic; color: rgba(255,255,255,0.6); max-width: 480px; margin: 0 auto 2rem; line-height: 1.7; }
+
+    @media (max-width: 900px) { .exec-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .exec-grid, .committee-list { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-kicker"><div class="page-hero-kicker-line"></div><span>Volunteers &amp; Leadership</span></div>
+    <h1>The <em>Executive</em></h1>
+    <p class="page-hero-sub">The dedicated volunteers who keep the Nauwigewauk Community Club running.</p>
+  </div>
+</div>
+
+<section class="exec-section">
+  <div class="container">
+    <div class="reveal">
+      <div class="label-tag">Leadership</div>
+      <h2 class="editorial">Our <em>Executive</em></h2>
+      <p class="exec-intro">The Nauwigewauk Community Club is run entirely by volunteers from the community. We are grateful for the time and dedication of everyone who contributes to keeping this club alive.</p>
+    </div>
+    <div class="placeholder-notice reveal">
+      <strong>📋 For the Club Executive</strong>
+      Replace the placeholder names below with your actual executive members and their roles. Add or remove cards as needed.
+    </div>
+    <div class="exec-grid">
+      <div class="exec-card reveal"><div class="exec-role">President</div><div class="exec-name">[Name]</div><div class="exec-placeholder">Add name here</div></div>
+      <div class="exec-card reveal"><div class="exec-role">Vice President</div><div class="exec-name">[Name]</div><div class="exec-placeholder">Add name here</div></div>
+      <div class="exec-card reveal"><div class="exec-role">Secretary</div><div class="exec-name">[Name]</div><div class="exec-placeholder">Add name here</div></div>
+      <div class="exec-card reveal"><div class="exec-role">Treasurer</div><div class="exec-name">[Name]</div><div class="exec-placeholder">Add name here</div></div>
+      <div class="exec-card reveal"><div class="exec-role">Director</div><div class="exec-name">[Name]</div><div class="exec-placeholder">Add name here</div></div>
+      <div class="exec-card reveal"><div class="exec-role">Director</div><div class="exec-name">[Name]</div><div class="exec-placeholder">Add name here</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="committee-section">
+  <div class="container">
+    <div class="reveal">
+      <div class="label-tag">Committees</div>
+      <h2 class="editorial">Committees &amp; <em>Roles</em></h2>
+      <p style="font-family:'Lora',serif;font-style:italic;color:var(--muted);margin-top:0.5rem;font-size:1rem;">Supporting positions that help the club operate day to day.</p>
+    </div>
+    <div class="placeholder-notice reveal">
+      <strong>📋 For the Club Executive</strong>
+      Update or remove committee roles as appropriate for your current structure.
+    </div>
+    <div class="committee-list reveal">
+      <div class="committee-item"><span class="ci-role">Hall Manager</span><span class="ci-name">[Name]</span></div>
+      <div class="committee-item"><span class="ci-role">Trail Coordinator</span><span class="ci-name">[Name]</span></div>
+      <div class="committee-item"><span class="ci-role">Events Coordinator</span><span class="ci-name">[Name]</span></div>
+      <div class="committee-item"><span class="ci-role">Communications</span><span class="ci-name">[Name]</span></div>
+      <div class="committee-item"><span class="ci-role">Grounds Maintenance</span><span class="ci-name">[Name]</span></div>
+      <div class="committee-item"><span class="ci-role">Membership</span><span class="ci-name">[Name]</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="volunteer-strip">
+  <h2>Want to <em>Get Involved?</em></h2>
+  <p>The club is always looking for volunteers. Whether you can spare a few hours or want a more active role, we'd love to hear from you.</p>
+  <a href="contact.html" class="btn btn-gold">Contact Us</a>
+</div>
+
+<script src="nav.js"></script>
+</body>
+</html>

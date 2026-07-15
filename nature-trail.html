@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nature Trail — Nauwigewauk Community Club</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .trail-section { background: var(--paper); }
+    .trail-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+    .trail-text p { font-family: 'Lora', serif; font-size: 1.05rem; line-height: 1.9; color: #3a3025; margin-bottom: 1.2rem; }
+    .pullquote { border-left: 4px solid var(--gold); padding: 0.5rem 0 0.5rem 1.5rem; margin: 2rem 0; }
+    .pullquote blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: var(--navy); line-height: 1.55; }
+
+    .trail-sidebar {}
+    .trail-info-box { background: var(--navy-dark); padding: 2rem; margin-bottom: 1.5rem; }
+    .trail-info-box h3 { font-family: 'Playfair Display', serif; color: var(--gold-lt); font-size: 1.1rem; margin-bottom: 1rem; }
+    .trail-stat { display: flex; justify-content: space-between; padding: 0.65rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-size: 0.88rem; }
+    .trail-stat:last-child { border-bottom: none; }
+    .trail-stat span:first-child { color: rgba(255,255,255,0.6); }
+    .trail-stat span:last-child { color: var(--gold-lt); font-weight: 600; }
+
+    .placeholder-notice { background: var(--gold-pale); border-left: 4px solid var(--gold); padding: 1.25rem 1.5rem; margin: 2rem 0; font-size: 0.88rem; color: var(--brown); line-height: 1.6; }
+    .placeholder-notice strong { display: block; margin-bottom: 0.25rem; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    /* Seasons */
+    .seasons-section { background: var(--cream); }
+    .seasons-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5px; background: var(--rule); border: 1px solid var(--rule); margin-top: 2.5rem; }
+    .season-card { background: var(--cream); padding: 2rem 1.5rem; text-align: center; }
+    .season-card:hover { background: var(--gold-pale); }
+    .season-icon { font-size: 2rem; display: block; margin-bottom: 0.75rem; }
+    .season-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--navy-dark); font-weight: 700; margin-bottom: 0.5rem; }
+    .season-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+    /* Rules */
+    .rules-section { background: var(--navy-dark); padding: 4rem 2rem; }
+    .rules-section .label-tag { color: var(--gold-lt); }
+    .rules-section .label-tag::before { background: var(--gold-lt); }
+    .rules-section h2.editorial { color: var(--cream); }
+    .rules-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 2.5rem; }
+    .rule-item { display: flex; gap: 1rem; align-items: start; }
+    .rule-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--gold); opacity: 0.5; line-height: 1; flex-shrink: 0; }
+    .rule-text { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.65; padding-top: 0.2rem; }
+
+    @media (max-width: 900px) { .trail-grid { grid-template-columns: 1fr; } .seasons-grid { grid-template-columns: 1fr 1fr; } .rules-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .seasons-grid, .rules-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-kicker"><div class="page-hero-kicker-line"></div><span>Explore the Outdoors</span></div>
+    <h1>The Nature <em>Trail</em></h1>
+    <p class="page-hero-sub">Walk through the natural landscape of the Kennebecasis River area — free and open to all.</p>
+  </div>
+</div>
+
+<section class="trail-section">
+  <div class="container">
+    <div class="trail-grid">
+      <div class="trail-text reveal">
+        <div class="label-tag">About the Trail</div>
+        <h2 class="editorial">Into the <em>Landscape</em></h2>
+        <div class="maple-divider"><span></span><span class="leaf">🍁</span><span></span></div>
+        <div class="placeholder-notice">
+          <strong>📋 For the Club Executive</strong>
+          Replace this section with a real description of the nature trail — its route, distance, notable features, what visitors will see, and any history of its development.
+        </div>
+        <p>The Nauwigewauk Nature Trail winds through the remarkable natural landscape that has defined this community for generations. The trail offers visitors a close connection with the rolling terrain, mature forest, and waterways that make this corner of New Brunswick so distinctive.</p>
+        <div class="pullquote"><blockquote>"A quiet path through some of the most beautiful natural scenery in Southern New Brunswick."</blockquote></div>
+        <p>The trail is maintained by volunteers from the Community Club and is free to use year-round. Whether you're looking for a peaceful morning walk or a family outing, the trail is a wonderful way to experience the area.</p>
+      </div>
+      <div class="trail-sidebar reveal">
+        <div class="trail-info-box">
+          <h3>Trail Details</h3>
+          <div class="trail-stat"><span>Distance</span><span>[Add length]</span></div>
+          <div class="trail-stat"><span>Difficulty</span><span>[Easy / Moderate]</span></div>
+          <div class="trail-stat"><span>Surface</span><span>[Gravel / Natural]</span></div>
+          <div class="trail-stat"><span>Accessible</span><span>[Yes / Partial]</span></div>
+          <div class="trail-stat"><span>Dogs Allowed</span><span>[Yes — on leash]</span></div>
+          <div class="trail-stat"><span>Open</span><span>Year-round</span></div>
+          <div class="trail-stat"><span>Fee</span><span>Free</span></div>
+        </div>
+        <div class="trail-info-box">
+          <h3>Getting There</h3>
+          <p style="color:rgba(255,255,255,0.65);font-size:0.88rem;line-height:1.7">[Add trailhead address and directions here — e.g. parking location, entrance point, and any landmarks to look for.]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seasons-section">
+  <div class="container">
+    <div class="reveal"><div class="label-tag">Year Round</div><h2 class="editorial">Trail Through the <em>Seasons</em></h2></div>
+    <div class="seasons-grid">
+      <div class="season-card reveal"><span class="season-icon">🌸</span><div class="season-name">Spring</div><p class="season-desc">Wildflowers emerge along the trail as the forest wakes up after the New Brunswick winter.</p></div>
+      <div class="season-card reveal"><span class="season-icon">🌿</span><div class="season-name">Summer</div><p class="season-desc">Full canopy shade makes the trail a cool retreat on warm summer days. Watch for local wildlife.</p></div>
+      <div class="season-card reveal"><span class="season-icon">🍂</span><div class="season-name">Autumn</div><p class="season-desc">Peak season — brilliant fall foliage transforms the trail into a stunning display of colour.</p></div>
+      <div class="season-card reveal"><span class="season-icon">❄️</span><div class="season-name">Winter</div><p class="season-desc">A peaceful winter walk through snow-covered trees. [Note any winter access restrictions if applicable.]</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="rules-section">
+  <div class="container">
+    <div class="reveal"><div class="label-tag">Trail Etiquette</div><h2 class="editorial">Trail <em>Guidelines</em></h2></div>
+    <div class="rules-grid">
+      <div class="rule-item reveal"><span class="rule-num">01</span><p class="rule-text">Stay on the marked trail to protect the natural environment and surrounding vegetation.</p></div>
+      <div class="rule-item reveal"><span class="rule-num">02</span><p class="rule-text">Pack out what you pack in. Please take your litter with you and leave the trail clean for others.</p></div>
+      <div class="rule-item reveal"><span class="rule-num">03</span><p class="rule-text">Dogs are welcome but must be kept on a leash at all times out of respect for wildlife and other trail users.</p></div>
+      <div class="rule-item reveal"><span class="rule-num">04</span><p class="rule-text">Respect the natural habitat — do not disturb wildlife, pick plants, or remove anything from the trail area.</p></div>
+      <div class="rule-item reveal"><span class="rule-num">05</span><p class="rule-text">Trail use is at your own risk. Please be mindful of conditions, especially in wet or icy weather.</p></div>
+      <div class="rule-item reveal"><span class="rule-num">06</span><p class="rule-text">Report any trail hazards or maintenance needs to the Club executive so we can address them promptly.</p></div>
+    </div>
+  </div>
+</section>
+
+<script src="nav.js"></script>
+</body>
+</html>

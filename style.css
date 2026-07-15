@@ -1,0 +1,123 @@
+/* ═══════════════════════════════════════════════
+   NAUWIGEWAUK COMMUNITY CLUB — Shared Stylesheet
+   ═══════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:      #1c3461;
+  --navy-dark: #111f3e;
+  --navy-mid:  #254578;
+  --gold:      #c8900b;
+  --gold-lt:   #e0a820;
+  --gold-pale: #f5e9cc;
+  --brown:     #7a4f2a;
+  --brown-lt:  #c4956a;
+  --maple:     #b83030;
+  --cream:     #faf6ef;
+  --paper:     #f2ece0;
+  --ink:       #1a1510;
+  --muted:     #6b5f4e;
+  --rule:      #ddd4c0;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+
+/* ── NAV ─────────────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 200;
+  background: var(--navy-dark); height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2.5rem; border-bottom: 3px solid var(--gold);
+}
+.nav-brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+.nav-logo-img { height: 38px; width: 38px; border-radius: 50%; border: 2px solid var(--gold); object-fit: contain; background: #fff; }
+.nav-brand-text { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: #fff; line-height: 1.2; }
+.nav-brand-text small { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-lt); font-weight: 400; }
+.nav-links { display: flex; gap: 0; list-style: none; }
+.nav-links a { display: block; padding: 0 0.9rem; height: 60px; line-height: 60px; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.76rem; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; transition: all 0.2s; border-bottom: 3px solid transparent; margin-bottom: -3px; }
+.nav-links a:hover, .nav-links a.active { color: #fff; border-bottom-color: var(--gold-lt); }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 0; }
+.nav-toggle span { width: 22px; height: 2px; background: #fff; display: block; }
+
+/* ── PAGE HERO (inner pages) ─────────────────── */
+.page-hero {
+  margin-top: 60px;
+  background: var(--navy-dark);
+  padding: 4.5rem 2.5rem 3.5rem;
+  position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Darlings_Island_covered_bridge.jpg/1280px-Darlings_Island_covered_bridge.jpg') center/cover no-repeat;
+  opacity: 0.08;
+}
+.page-hero-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; }
+.page-hero-kicker { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem; }
+.page-hero-kicker-line { width: 28px; height: 2px; background: var(--gold); flex-shrink: 0; }
+.page-hero-kicker span { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-lt); }
+.page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); color: #fff; font-weight: 900; line-height: 1.1; }
+.page-hero h1 em { font-style: italic; color: var(--gold-lt); }
+.page-hero-sub { font-family: 'Lora', serif; font-style: italic; color: rgba(255,255,255,0.6); font-size: 1rem; margin-top: 0.75rem; }
+
+/* ── LAYOUT ──────────────────────────────────── */
+section { padding: 5rem 2rem; }
+.container { max-width: 1100px; margin: 0 auto; }
+
+/* ── TYPE UTILITIES ──────────────────────────── */
+.label-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+.label-tag::before { content: ''; width: 24px; height: 2px; background: var(--gold); flex-shrink: 0; }
+h2.editorial { font-family: 'Playfair Display', serif; font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.1; color: var(--navy-dark); margin-bottom: 0.5rem; }
+h2.editorial em { font-style: italic; }
+.rule { width: 100%; height: 1px; background: var(--rule); margin: 2rem 0; }
+.maple-divider { display: flex; align-items: center; gap: 1rem; margin: 1.25rem 0 1.75rem; }
+.maple-divider span { flex: 1; height: 1px; background: var(--rule); }
+.maple-divider .leaf { color: var(--maple); font-size: 1rem; }
+
+/* ── BUTTONS ─────────────────────────────────── */
+.btn { display: inline-block; text-decoration: none; padding: 0.85rem 1.8rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.2s; }
+.btn-gold { background: var(--gold); color: #fff; }
+.btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); }
+.btn-outline-navy { border: 1px solid var(--navy); color: var(--navy); }
+.btn-outline-navy:hover { background: var(--navy); color: #fff; }
+.btn-navy { background: var(--navy-dark); color: #fff; white-space: nowrap; }
+.btn-navy:hover { background: var(--navy-mid); }
+.btn-outline { border: 1px solid rgba(255,255,255,0.35); color: #fff; }
+.btn-outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.7); }
+
+/* ── CONTACT STRIP ───────────────────────────── */
+.contact-strip { background: var(--gold); padding: 5rem 2rem; }
+.contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 3rem; }
+.contact-strip h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--navy-dark); line-height: 1.2; }
+.contact-strip h2 em { font-style: italic; }
+.contact-strip p { font-family: 'Lora', serif; font-style: italic; font-size: 1rem; color: rgba(17,31,62,0.65); margin-top: 0.5rem; line-height: 1.6; }
+
+/* ── FOOTER ──────────────────────────────────── */
+footer { background: #0e1927; padding: 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+footer img { height: 40px; opacity: 0.65; object-fit: contain; }
+.footer-text { font-size: 0.8rem; color: rgba(255,255,255,0.32); letter-spacing: 0.04em; text-align: center; flex: 1; }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 0.78rem; color: rgba(255,255,255,0.38); text-decoration: none; letter-spacing: 0.05em; transition: color 0.2s; }
+.footer-links a:hover { color: var(--gold-lt); }
+
+/* ── ANIMATIONS ──────────────────────────────── */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 900px) {
+  .contact-inner { grid-template-columns: 1fr; }
+  .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background: var(--navy-dark); padding: 1rem 2rem 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
+  .nav-links.open { display: flex; }
+  .nav-links a { height: auto; line-height: 1; padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); margin: 0; }
+  .nav-toggle { display: flex; }
+}
+@media (max-width: 560px) {
+  footer { flex-direction: column; text-align: center; }
+  .footer-links { justify-content: center; }
+}

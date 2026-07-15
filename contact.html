@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Nauwigewauk Community Club</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-section { background: var(--paper); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; align-items: start; }
+
+    .placeholder-notice { background: var(--gold-pale); border-left: 4px solid var(--gold); padding: 1.25rem 1.5rem; margin-bottom: 2rem; font-size: 0.88rem; color: var(--brown); line-height: 1.6; }
+    .placeholder-notice strong { display: block; margin-bottom: 0.25rem; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    /* Contact form */
+    .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy); }
+    .form-group input, .form-group select, .form-group textarea {
+      padding: 0.85rem 1rem; border: 1px solid var(--rule); background: var(--cream);
+      font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--ink);
+      outline: none; transition: border-color 0.2s; width: 100%;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
+    .form-group textarea { resize: vertical; min-height: 140px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-submit { background: var(--gold); color: #fff; border: none; padding: 1rem 2rem; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; text-align: left; }
+    .form-submit:hover { background: var(--gold-lt); }
+    .form-note { font-size: 0.8rem; color: var(--muted); font-style: italic; }
+
+    /* Info sidebar */
+    .info-block { margin-bottom: 2.5rem; }
+    .info-block h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy-dark); margin-bottom: 0.75rem; }
+    .info-row { display: flex; gap: 0.75rem; align-items: baseline; padding: 0.6rem 0; border-bottom: 1px solid var(--rule); font-size: 0.9rem; }
+    .info-row:last-child { border-bottom: none; }
+    .info-row .info-label { color: var(--muted); min-width: 90px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.07em; }
+    .info-row .info-value { color: var(--ink); line-height: 1.5; }
+    .info-row a { color: var(--navy); text-decoration: none; }
+    .info-row a:hover { color: var(--gold); }
+
+    .map-placeholder { background: var(--paper); border: 1px solid var(--rule); height: 220px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.5rem; margin-top: 1.5rem; color: var(--muted); font-size: 0.85rem; font-style: italic; text-align: center; padding: 1rem; }
+    .map-placeholder span { font-size: 2rem; }
+
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-kicker"><div class="page-hero-kicker-line"></div><span>Get In Touch</span></div>
+    <h1>Contact <em>Us</em></h1>
+    <p class="page-hero-sub">Questions, bookings, volunteering — we'd love to hear from you.</p>
+  </div>
+</div>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- FORM -->
+      <div class="reveal">
+        <div class="label-tag">Send a Message</div>
+        <h2 class="editorial">Get in <em>Touch</em></h2>
+        <div style="margin-top:1.5rem"></div>
+        <div class="placeholder-notice">
+          <strong>📋 For the Club Executive</strong>
+          This form is for display only. To make it functional, connect it to a service like <a href="https://formspree.io" target="_blank" style="color:var(--brown)">Formspree.io</a> (free) — replace the <code>action</code> attribute with your Formspree endpoint URL. Or remove the form and replace it with a direct email address.
+        </div>
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-row">
+            <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname" name="fname" placeholder="Jane" /></div>
+            <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" name="lname" placeholder="Smith" /></div>
+          </div>
+          <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="jane@example.com" /></div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">— Select a topic —</option>
+              <option>Hall Rental Enquiry</option>
+              <option>Volunteering</option>
+              <option>Membership</option>
+              <option>Nature Trail</option>
+              <option>Photo Submission</option>
+              <option>General Question</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="Your message here…"></textarea></div>
+          <div>
+            <button type="submit" class="form-submit">Send Message →</button>
+            <p class="form-note" style="margin-top:0.75rem">We'll do our best to respond within a few days.</p>
+          </div>
+        </form>
+      </div>
+
+      <!-- INFO -->
+      <div class="reveal">
+        <div class="label-tag">Find Us</div>
+        <h2 class="editorial">Club <em>Information</em></h2>
+        <div style="margin-top:1.5rem"></div>
+
+        <div class="info-block">
+          <h3>Location</h3>
+          <div class="info-row"><span class="info-label">Address</span><span class="info-value">[Add club address]<br>Route 100, Southern New Brunswick</span></div>
+          <div class="info-row"><span class="info-label">Directions</span><span class="info-value">[Add brief directions or nearest landmark]</span></div>
+        </div>
+
+        <div class="info-block">
+          <h3>Contact</h3>
+          <div class="info-row"><span class="info-label">Email</span><span class="info-value"><a href="mailto:[add email]">[Add club email]</a></span></div>
+          <div class="info-row"><span class="info-label">Phone</span><span class="info-value">[Add phone number if applicable]</span></div>
+          <div class="info-row"><span class="info-label">Facebook</span><span class="info-value"><a href="#" target="_blank">[Add Facebook page link]</a></span></div>
+        </div>
+
+        <div class="info-block">
+          <h3>Hall Hours</h3>
+          <div class="info-row"><span class="info-label">Office</span><span class="info-value">[By appointment — contact us]</span></div>
+          <div class="info-row"><span class="info-label">Rentals</span><span class="info-value">Flexible — contact executive to arrange</span></div>
+          <div class="info-row"><span class="info-label">Trail</span><span class="info-value">Open year-round, dawn to dusk</span></div>
+        </div>
+
+        <div class="map-placeholder">
+          <span>🗺️</span>
+          <p>To embed a map, paste a Google Maps embed code here.<br>Go to Google Maps → Share → Embed a map → Copy HTML.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="nav.js"></script>
+</body>
+</html>
