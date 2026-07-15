@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     /* ── HERO ── */
-    .hero { margin-top: 60px; min-height: calc(100vh - 60px); display: grid; grid-template-columns: 1fr 1fr; }
+    .hero { margin-top: 64px; min-height: calc(100vh - 64px); display: grid; grid-template-columns: 1fr 1fr; }
     .hero-left { background: var(--navy-dark); display: flex; flex-direction: column; justify-content: center; padding: 5rem 4rem 5rem 5rem; position: relative; z-index: 1; }
     .hero-kicker { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.5rem; }
     .hero-kicker-line { width: 32px; height: 2px; background: var(--gold); flex-shrink: 0; }
@@ -20,44 +20,37 @@
     .stat-lbl { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 0.2rem; display: block; }
     .hero-right { position: relative; overflow: hidden; }
     .hero-right img { width: 100%; height: 100%; object-fit: cover; display: block; filter: sepia(15%) contrast(1.05); }
-    .hero-right::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(17,31,62,0.35), transparent 60%); }
     .photo-pending { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); display: flex; align-items: center; justify-content: center; }
     .photo-pending-inner { text-align: center; padding: 2rem; }
     .photo-pending-icon { font-size: 2.5rem; display: block; margin-bottom: 1rem; opacity: 0.7; }
     .photo-pending-inner p { font-family: 'Lora', serif; font-style: italic; color: rgba(255,255,255,0.55); font-size: 0.95rem; line-height: 1.6; }
     .photo-pending-inner p span { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
-    .sidebar-img-wrap.photo-pending { aspect-ratio: 4/3; box-shadow: 8px 8px 0 var(--navy); }
     .hero-badge { position: absolute; bottom: 2rem; right: 2rem; z-index: 2; background: rgba(17,31,62,0.92); border: 2px solid var(--gold); padding: 0.75rem; backdrop-filter: blur(4px); }
     .hero-badge img { width: 56px; height: 56px; object-fit: contain; display: block; }
 
-    /* ── ABOUT ── */
-    .about { background: var(--paper); }
-    .about-grid { display: grid; grid-template-columns: 5fr 4fr; gap: 5rem; align-items: start; }
-    .about-text p { font-family: 'Lora', serif; font-size: 1.05rem; line-height: 1.9; color: #3a3025; margin-bottom: 1.2rem; }
-    .pullquote { border-left: 4px solid var(--gold); padding: 0.5rem 0 0.5rem 1.5rem; margin: 2rem 0; }
-    .pullquote blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.25rem; color: var(--navy); line-height: 1.55; }
-    .sidebar-img-wrap img { width: 100%; display: block; box-shadow: 8px 8px 0 var(--navy); }
-    .sidebar-caption { font-size: 0.78rem; color: var(--muted); font-style: italic; margin-top: 0.75rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
-    .sidebar-fact { padding: 1.25rem 0; border-bottom: 1px solid var(--rule); }
-    .sidebar-fact strong { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--navy); display: block; line-height: 1; }
-    .sidebar-fact span { font-size: 0.82rem; color: var(--muted); margin-top: 0.25rem; display: block; }
+    /* ── NEWS & EVENTS SNAPSHOT ── */
+    .home-events { background: var(--paper); }
+    .home-events-header { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .home-events-header .view-all { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); text-decoration: none; border-bottom: 2px solid var(--gold); padding-bottom: 0.2rem; }
+    .home-events-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 1.5px; background: var(--rule); border: 1px solid var(--rule); margin-top: 2.5rem; }
 
-    /* ── TIMELINE ── */
-    .timeline-sec { background: var(--navy-dark); }
-    .timeline-sec h2.editorial { color: var(--cream); }
-    .timeline-sec .label-tag { color: var(--gold-lt); }
-    .timeline-sec .label-tag::before { background: var(--gold-lt); }
-    .timeline-intro { font-family: 'Lora', serif; font-style: italic; color: rgba(242,236,224,0.6); font-size: 1rem; max-width: 540px; margin-top: 0.6rem; }
-    .timeline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem; margin-top: 3.5rem; position: relative; }
-    .timeline-grid::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(200,144,11,0.25); }
-    .t-card { padding: 0 0 2.5rem; position: relative; }
-    .t-card.right { padding-left: 2rem; }
-    .t-card.left  { padding-right: 2rem; text-align: right; }
-    .t-card::before { content: ''; position: absolute; top: 0.5rem; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); border: 2px solid var(--navy-dark); box-shadow: 0 0 0 2px var(--gold); }
-    .t-card.right::before { left: -5px; }
-    .t-card.left::before  { right: -5px; }
-    .t-year { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--gold-lt); display: block; line-height: 1; margin-bottom: 0.4rem; }
-    .t-body { font-size: 0.9rem; color: rgba(242,236,224,0.7); line-height: 1.7; }
+    .event-list-home { display: flex; flex-direction: column; gap: 1.5px; background: var(--rule); }
+    .event-card-home { background: var(--cream); padding: 1.75rem 2rem; display: grid; grid-template-columns: 64px 1fr; gap: 1.25rem; align-items: start; transition: background 0.2s; }
+    .event-card-home:hover { background: var(--gold-pale); }
+    .event-date-home { text-align: center; background: var(--navy-dark); padding: 0.6rem 0.4rem; color: #fff; }
+    .event-date-home .month { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-lt); display: block; }
+    .event-date-home .day { font-family: 'Playfair Display', serif; font-size: 1.6rem; line-height: 1; font-weight: 700; display: block; }
+    .event-tag-home { display: inline-block; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+    .event-title-home { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--navy-dark); font-weight: 700; margin-bottom: 0.3rem; }
+    .event-meta-home { font-size: 0.8rem; color: var(--muted); }
+
+    .news-snapshot { background: var(--navy-dark); padding: 1.75rem 1.75rem; display: flex; flex-direction: column; gap: 1.25rem; }
+    .news-snapshot h3 { font-family: 'Playfair Display', serif; color: var(--gold-lt); font-size: 1rem; }
+    .news-item-home { padding-bottom: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .news-item-home:last-of-type { border-bottom: none; padding-bottom: 0; }
+    .news-item-home .nd { font-size: 0.68rem; color: rgba(255,255,255,0.4); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.3rem; display: block; }
+    .news-item-home .nt { font-size: 0.88rem; color: rgba(255,255,255,0.8); line-height: 1.5; }
+    .news-snapshot a { font-size: 0.75rem; color: var(--gold-lt); text-decoration: none; font-weight: 600; letter-spacing: 0.05em; }
 
     /* ── QUICK LINKS ── */
     .quicklinks { background: var(--cream); }
@@ -74,11 +67,7 @@
       .hero { grid-template-columns: 1fr; }
       .hero-right { height: 50vw; min-height: 260px; }
       .hero-left { padding: 3rem 2rem; }
-      .about-grid { grid-template-columns: 1fr; }
-      .timeline-grid { grid-template-columns: 1fr; }
-      .timeline-grid::before { left: 8px; }
-      .t-card.left, .t-card.right { padding-left: 1.75rem; padding-right: 0; text-align: left; }
-      .t-card.left::before, .t-card.right::before { left: 3px; right: auto; }
+      .home-events-grid { grid-template-columns: 1fr; }
       .links-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 560px) { .links-grid { grid-template-columns: 1fr; } }
@@ -94,7 +83,7 @@
     <p class="hero-body">Nestled between Hampton and Quispamsis along the Kennebecasis River — a gathering place for neighbours, families, and friends for over 75 years.</p>
     <div class="hero-actions">
       <a href="news-events.html" class="btn btn-gold">News &amp; Events</a>
-      <a href="#about" class="btn btn-outline">Our Story</a>
+      <a href="history.html" class="btn btn-outline">Our History</a>
     </div>
     <div class="hero-stats">
       <div><span class="stat-num">1948</span><span class="stat-lbl">Founded</span></div>
@@ -111,50 +100,59 @@
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
+<!-- NEWS & EVENTS SNAPSHOT -->
+<section class="home-events">
   <div class="container">
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <div class="label-tag">Our History</div>
-        <h2 class="editorial">A Place Where<br><em>Nature Endures</em></h2>
-        <div class="maple-divider"><span></span><span class="leaf">🍁</span><span></span></div>
-        <p>Nauwigewauk is located on Route 100 in Southern New Brunswick, Canada, nestled between the communities of Hampton and Quispamsis.</p>
-        <p>The original European settlers of Darlings Island and the surrounding area were drawn by its remarkable landscape — the rolling topography of the land, the waters of the Kennebecasis River, the Hammond River, and Darlings Lake.</p>
-        <div class="pullquote"><blockquote>"These natural elements remain the prime factor in attracting people to the area and sustaining their sense of place."</blockquote></div>
-        <p>Today, the Club carries that tradition forward — maintaining the hall, the nature trail, and the many programmes that have united this community since 1948.</p>
+    <div class="home-events-header reveal">
+      <div>
+        <div class="label-tag">Stay Connected</div>
+        <h2 class="editorial">News &amp; <em>Events</em></h2>
       </div>
-      <div class="about-sidebar reveal">
-        <div class="sidebar-img-wrap photo-pending">
-          <div class="photo-pending-inner">
-            <span class="photo-pending-icon">📷</span>
-            <p>Add a photo here<br><span>e.g. the covered bridge at Darlings Island</span></p>
+      <a href="news-events.html" class="view-all">View Full Calendar →</a>
+    </div>
+    <div class="home-events-grid">
+      <div class="event-list-home reveal">
+        <div class="event-card-home">
+          <div class="event-date-home"><span class="month">Apr</span><span class="day">12</span></div>
+          <div>
+            <span class="event-tag-home">Meeting</span>
+            <div class="event-title-home">Annual General Meeting</div>
+            <div class="event-meta-home">7:00 PM · Nauwigewauk Community Hall</div>
           </div>
         </div>
-        <p class="sidebar-caption">The iconic covered bridge at Darlings Island — a symbol of the area's heritage.</p>
-        <div class="sidebar-fact"><strong>1948</strong><span>Year the Club was founded</span></div>
-        <div class="sidebar-fact"><strong>Route 100</strong><span>Southern New Brunswick, Canada</span></div>
-        <div class="sidebar-fact"><strong>75+</strong><span>Years serving the community</span></div>
+        <div class="event-card-home">
+          <div class="event-date-home"><span class="month">May</span><span class="day">24</span></div>
+          <div>
+            <span class="event-tag-home">Community</span>
+            <div class="event-title-home">Victoria Day Gathering</div>
+            <div class="event-meta-home">2:00 PM · Club Grounds</div>
+          </div>
+        </div>
+        <div class="event-card-home">
+          <div class="event-date-home"><span class="month">Jun</span><span class="day">7</span></div>
+          <div>
+            <span class="event-tag-home">Volunteer</span>
+            <div class="event-title-home">Trail Cleanup Day</div>
+            <div class="event-meta-home">9:00 AM · Nature Trail Entrance</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- TIMELINE -->
-<section class="timeline-sec">
-  <div class="container">
-    <div class="reveal">
-      <div class="label-tag">Milestones</div>
-      <h2 class="editorial">Dates of <em>Interest</em></h2>
-      <p class="timeline-intro">From our founding in 1948 to the renewal of our facilities — a community built to last.</p>
-    </div>
-    <div class="timeline-grid">
-      <div class="t-card left reveal"><span class="t-year">1948</span><p class="t-body">The Club's first meeting was held at a hall on Station Loop Road on June 21st. The first Community Fair was held on September 4th of the same year.</p></div>
-      <div class="t-card right reveal" style="padding-top:3rem"><span class="t-year">1951 – 52</span><p class="t-body">Land between the Nauwigewauk Fire Station and the railroad tracks was purchased. The mortgage was ceremonially burned at the Annual Meeting in October 1952.</p></div>
-      <div class="t-card left reveal"><span class="t-year">1955 – 56</span><p class="t-body">Construction of the Old Nauwigewauk Community Club began in 1955. The official opening was celebrated on January 25th, 1956.</p></div>
-      <div class="t-card right reveal" style="padding-top:3rem"><span class="t-year">1958</span><p class="t-body">An outdoor skating rink was constructed and paved — a beloved winter fixture for generations of local families until its removal in 2019.</p></div>
-      <div class="t-card left reveal"><span class="t-year">2018</span><p class="t-body">A new Fire Hall was constructed, beginning a major renewal of the community's infrastructure.</p></div>
-      <div class="t-card right reveal" style="padding-top:3rem"><span class="t-year">2019</span><p class="t-body">The Old Hall, old fire hall, and skating rink were demolished. Construction of a new elevated road began that summer — a new chapter for Nauwigewauk.</p></div>
+      <div class="news-snapshot reveal">
+        <h3>Latest News</h3>
+        <div class="news-item-home">
+          <span class="nd">March 2024</span>
+          <p class="nt">Executive Meeting Summary — March</p>
+        </div>
+        <div class="news-item-home">
+          <span class="nd">February 2024</span>
+          <p class="nt">Nature Trail Signage Update</p>
+        </div>
+        <div class="news-item-home">
+          <span class="nd">January 2024</span>
+          <p class="nt">Welcome to Our New Website</p>
+        </div>
+        <a href="news-events.html">Read all news →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -164,7 +162,7 @@
   <div class="container">
     <div class="reveal"><div class="label-tag">Explore</div><h2 class="editorial">Everything <em>NCC</em></h2></div>
     <div class="links-grid">
-      <a href="news-events.html"  class="link-card reveal"><span class="lc-num">01</span><div class="lc-title">News &amp; Events</div><p class="lc-desc">Upcoming gatherings, announcements, and community news.</p></a>
+      <a href="history.html"      class="link-card reveal"><span class="lc-num">01</span><div class="lc-title">Our History</div><p class="lc-desc">From our 1948 founding to today — the story of the club.</p></a>
       <a href="facilities.html"   class="link-card reveal"><span class="lc-num">02</span><div class="lc-title">Facilities</div><p class="lc-desc">Our hall and community spaces available for rental.</p></a>
       <a href="nature-trail.html" class="link-card reveal"><span class="lc-num">03</span><div class="lc-title">Nature Trail</div><p class="lc-desc">Walk through the beauty of the Kennebecasis River area.</p></a>
       <a href="photo-archive.html"class="link-card reveal"><span class="lc-num">04</span><div class="lc-title">Photo Archive</div><p class="lc-desc">Decades of community memories and historic photographs.</p></a>
