@@ -18,13 +18,26 @@
     .trail-stat { display: flex; justify-content: space-between; padding: 0.65rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-size: 0.88rem; }
     .trail-stat:last-child { border-bottom: none; }
     .trail-stat span:first-child { color: rgba(255,255,255,0.6); }
-    .trail-stat span:last-child { color: var(--gold-lt); font-weight: 600; }
+    .trail-stat span:last-child { color: var(--gold-lt); font-weight: 600; text-align: right; }
+
+    .trail-map-wrap { margin: 2.5rem 0; text-align: center; }
+    .trail-map-wrap img { max-width: 100%; height: auto; box-shadow: 0 12px 32px rgba(17,31,62,0.18); border: 1px solid var(--rule); }
+    .trail-map-cap { font-family: 'Lora', serif; font-style: italic; font-size: 0.82rem; color: var(--muted); margin-top: 0.85rem; }
+
+    /* Six Trails grid */
+    .trails-section { background: var(--cream); }
+    .trails-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5px; background: var(--rule); border: 1px solid var(--rule); margin-top: 2.5rem; }
+    .trail-card { background: var(--cream); padding: 2rem 1.75rem; position: relative; transition: background 0.2s; }
+    .trail-card:hover { background: var(--gold-pale); }
+    .trail-card-num { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--gold); display: block; margin-bottom: 0.5rem; }
+    .trail-card-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--navy-dark); font-weight: 700; margin-bottom: 0.25rem; line-height: 1.3; }
+    .trail-card-fr { font-family: 'Lora', serif; font-style: italic; font-size: 0.85rem; color: var(--muted); }
 
     .placeholder-notice { background: var(--gold-pale); border-left: 4px solid var(--gold); padding: 1.25rem 1.5rem; margin: 2rem 0; font-size: 0.88rem; color: var(--brown); line-height: 1.6; }
     .placeholder-notice strong { display: block; margin-bottom: 0.25rem; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
 
     /* Seasons */
-    .seasons-section { background: var(--cream); }
+    .seasons-section { background: var(--paper); }
     .seasons-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5px; background: var(--rule); border: 1px solid var(--rule); margin-top: 2.5rem; }
     .season-card { background: var(--cream); padding: 2rem 1.5rem; text-align: center; }
     .season-card:hover { background: var(--gold-pale); }
@@ -42,8 +55,8 @@
     .rule-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--gold); opacity: 0.5; line-height: 1; flex-shrink: 0; }
     .rule-text { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.65; padding-top: 0.2rem; }
 
-    @media (max-width: 900px) { .trail-grid { grid-template-columns: 1fr; } .seasons-grid { grid-template-columns: 1fr 1fr; } .rules-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 560px) { .seasons-grid, .rules-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 900px) { .trail-grid { grid-template-columns: 1fr; } .trails-grid { grid-template-columns: 1fr 1fr; } .seasons-grid { grid-template-columns: 1fr 1fr; } .rules-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .trails-grid, .seasons-grid, .rules-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -60,33 +73,46 @@
   <div class="container">
     <div class="trail-grid">
       <div class="trail-text reveal">
-        <div class="label-tag">About the Trail</div>
+        <div class="label-tag">About the Trails</div>
         <h2 class="editorial">Into the <em>Landscape</em></h2>
         <div class="maple-divider"><span></span><span class="leaf">🍁</span><span></span></div>
-        <div class="placeholder-notice">
-          <strong>📋 For the Club Executive</strong>
-          Replace this section with a real description of the nature trail — its route, distance, notable features, what visitors will see, and any history of its development.
-        </div>
-        <p>The Nauwigewauk Nature Trail winds through the remarkable natural landscape that has defined this community for generations. The trail offers visitors a close connection with the rolling terrain, mature forest, and waterways that make this corner of New Brunswick so distinctive.</p>
+        <p>The Nauwigewauk Community Club grounds include a network of six named trails winding through the natural landscape along the Hammond River — from open field paths to shaded pine groves.</p>
         <div class="pullquote"><blockquote>"A quiet path through some of the most beautiful natural scenery in Southern New Brunswick."</blockquote></div>
-        <p>The trail is maintained by volunteers from the Community Club and is free to use year-round. Whether you're looking for a peaceful morning walk or a family outing, the trail is a wonderful way to experience the area.</p>
+        <p>The trails are maintained by volunteers from the Community Club and are free to use year-round. Whether you're looking for a peaceful morning walk or a family outing, the network connects the picnic shelter, playground, ball diamond, and the historic covered bridge.</p>
+        <div class="trail-map-wrap">
+          <img src="trail-map.jpg" alt="Nauwigewauk Community Club Nature Trail map showing all six trails and grounds facilities" />
+          <p class="trail-map-cap">Official trail map — Turtle, Beaver, Pine Grove, Picnic, Old Stone Road, and Ganong Field trails</p>
+        </div>
       </div>
       <div class="trail-sidebar reveal">
         <div class="trail-info-box">
-          <h3>Trail Details</h3>
-          <div class="trail-stat"><span>Distance</span><span>[Add length]</span></div>
-          <div class="trail-stat"><span>Difficulty</span><span>[Easy / Moderate]</span></div>
-          <div class="trail-stat"><span>Surface</span><span>[Gravel / Natural]</span></div>
-          <div class="trail-stat"><span>Accessible</span><span>[Yes / Partial]</span></div>
-          <div class="trail-stat"><span>Dogs Allowed</span><span>[Yes — on leash]</span></div>
+          <h3>Trailheads</h3>
+          <div class="trail-stat"><span>Turtle Trail Head</span><span>Main access point</span></div>
+          <div class="trail-stat"><span>Beaver Trail Head</span><span>South access point</span></div>
           <div class="trail-stat"><span>Open</span><span>Year-round</span></div>
           <div class="trail-stat"><span>Fee</span><span>Free</span></div>
+          <div class="trail-stat"><span>Dogs Allowed</span><span>On leash</span></div>
         </div>
         <div class="trail-info-box">
           <h3>Getting There</h3>
-          <p style="color:rgba(255,255,255,0.65);font-size:0.88rem;line-height:1.7">The trailhead is located at the club grounds, 36 Darlings Island Road. [Add parking location, entrance point, and any landmarks to look for.]</p>
+          <p style="color:rgba(255,255,255,0.65);font-size:0.88rem;line-height:1.7">The trailheads are located at the club grounds, 36 Darlings Island Road. Parking is available near the picnic shelter and playground.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIX TRAILS -->
+<section class="trails-section">
+  <div class="container">
+    <div class="reveal"><div class="label-tag">The Network</div><h2 class="editorial">Six <em>Trails</em></h2></div>
+    <div class="trails-grid">
+      <div class="trail-card reveal"><span class="trail-card-num">1</span><div class="trail-card-name">Turtle Trail</div><div class="trail-card-fr">Sentier de la tortue</div></div>
+      <div class="trail-card reveal"><span class="trail-card-num">2</span><div class="trail-card-name">Beaver Trail</div><div class="trail-card-fr">Sentier du castor</div></div>
+      <div class="trail-card reveal"><span class="trail-card-num">3</span><div class="trail-card-name">Pine Grove Trail</div><div class="trail-card-fr">Sentier des pins</div></div>
+      <div class="trail-card reveal"><span class="trail-card-num">4</span><div class="trail-card-name">Picnic Trail</div><div class="trail-card-fr">Sentier pique-nique</div></div>
+      <div class="trail-card reveal"><span class="trail-card-num">5</span><div class="trail-card-name">Old Stone Road Trail</div><div class="trail-card-fr">Sentier du chemin des vieilles roches</div></div>
+      <div class="trail-card reveal"><span class="trail-card-num">6</span><div class="trail-card-name">Ganong Field Trail</div><div class="trail-card-fr">Sentier Ganong</div></div>
     </div>
   </div>
 </section>
