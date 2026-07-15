@@ -29,14 +29,14 @@ body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(
 /* ── NAV BAR ─────────────────────────────────── */
 nav {
   position: fixed; top: 0; left: 0; width: 100%; z-index: 200;
-  background: var(--navy-dark); height: 96px;
+  background: var(--navy-dark); height: 132px;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 2rem; border-bottom: 3px solid var(--gold);
 }
-.nav-brand { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
-.nav-logo-img { height: 72px; width: 72px; object-fit: contain; }
-.nav-brand-text { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #fff; line-height: 1.25; }
-.nav-brand-text small { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-lt); font-weight: 400; }
+.nav-brand { display: flex; align-items: center; gap: 1.1rem; text-decoration: none; }
+.nav-logo-img { height: 108px; width: 108px; object-fit: contain; }
+.nav-brand-text { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #fff; line-height: 1.25; }
+.nav-brand-text small { display: block; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-lt); font-weight: 400; }
 
 /* Minimal menu trigger */
 .menu-btn {
@@ -61,7 +61,7 @@ nav {
 .menu-overlay.open { opacity: 1; visibility: visible; transform: translateY(0); }
 .menu-overlay-top {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 2rem; height: 96px; border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 0 2rem; height: 132px; border-bottom: 1px solid rgba(255,255,255,0.08);
   flex-shrink: 0;
 }
 .menu-close {
@@ -100,7 +100,7 @@ nav {
 
 /* ── PAGE HERO (inner pages) ─────────────────── */
 .page-hero {
-  margin-top: 96px;
+  margin-top: 132px;
   background: var(--navy-dark);
   padding: 4.5rem 2.5rem 3.5rem;
   position: relative; overflow: hidden;
