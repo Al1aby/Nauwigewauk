@@ -9,6 +9,7 @@
     { href: 'nature-trail.html', label: 'Nature Trail' },
     { href: 'photo-archive.html',label: 'Photo Archive' },
     { href: 'executive.html',    label: 'Executive' },
+    { href: 'donate.html',       label: 'Donate' },
     { href: 'contact.html',      label: 'Contact' },
   ];
 
@@ -47,7 +48,10 @@
         <h2>Be Part of the <em>Community</em></h2>
         <p>Whether a longtime resident or new to the area — everyone is welcome.</p>
       </div>
-      <a href="contact.html" class="btn btn-navy">Get In Touch</a>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+        <a href="donate.html" class="btn btn-outline-navy">Donate</a>
+        <a href="contact.html" class="btn btn-navy">Get In Touch</a>
+      </div>
     </div>
   </div>
   <footer>
@@ -55,7 +59,7 @@
     <div class="footer-text">© 2024 Nauwigewauk Community Club Inc. · Route 100, Southern New Brunswick, Canada</div>
     <div class="footer-links">
       <a href="history.html">Our History</a>
-      <a href="facilities.html">Facilities</a>
+      <a href="donate.html">Donate</a>
       <a href="contact.html">Contact</a>
     </div>
   </footer>`;

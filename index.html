@@ -74,6 +74,8 @@
     .edr-badge .d { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 800; color: var(--navy-dark); line-height: 1; display: block; }
     .edr-time { font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-bottom: 0.25rem; }
     .edr-title { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: #fff; font-weight: 700; line-height: 1.3; }
+    .event-date-list .gcal-empty, .event-date-list .gcal-error { padding: 1.5rem 0; text-align: left; color: rgba(255,255,255,0.6); font-family: 'Lora', serif; font-style: italic; font-size: 0.9rem; }
+    .event-date-list .gcal-error a { color: var(--gold-lt); font-style: normal; }
 
     /* ── SPOTLIGHT (icon + text + offset-block photo) ── */
     .spotlight-section { background: var(--paper); padding: 6rem 2.5rem; }
@@ -172,19 +174,8 @@
       <a href="contact.html" class="btn-block-outline">Get In Touch</a>
     </div>
     <div class="reveal">
-      <div class="event-date-list">
-        <div class="event-date-row">
-          <div class="edr-badge"><span class="m">Apr</span><span class="d">12</span></div>
-          <div><div class="edr-time">7:00 PM · Picnic Shelter</div><div class="edr-title">Annual General Meeting</div></div>
-        </div>
-        <div class="event-date-row">
-          <div class="edr-badge"><span class="m">May</span><span class="d">24</span></div>
-          <div><div class="edr-time">2:00 PM · Club Grounds</div><div class="edr-title">Victoria Day Gathering</div></div>
-        </div>
-        <div class="event-date-row">
-          <div class="edr-badge"><span class="m">Jun</span><span class="d">7</span></div>
-          <div><div class="edr-time">9:00 AM · Nature Trail Entrance</div><div class="edr-title">Trail Cleanup Day</div></div>
-        </div>
+      <div class="event-date-list" id="ncc-home-calendar-widget">
+        <div class="gcal-empty">Loading upcoming events…</div>
       </div>
       <div style="margin-top:1.75rem"><a href="news-events.html" class="btn-block-outline">View All Events</a></div>
     </div>
@@ -204,11 +195,8 @@
     </div>
     <div class="spotlight-photo-wrap reveal">
       <div class="offset-block"></div>
-      <div class="spotlight-photo photo-pending">
-        <div class="photo-pending-inner">
-          <span class="photo-pending-icon">🌲</span>
-          <p>Add a trail or grounds photo here</p>
-        </div>
+      <div class="spotlight-photo">
+        <img src="trail-photo.jpg" alt="Beaver Trail sign on the Nauwigewauk Community Club nature trail" style="width:100%; height:100%; object-fit:cover; display:block;" />
       </div>
     </div>
   </div>
@@ -224,5 +212,11 @@
 </section>
 
 <script src="nav.js"></script>
+<script src="calendar-widget.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    loadCalendarWidget('ncc-home-calendar-widget', 3, 'feature');
+  });
+</script>
 </body>
 </html>
