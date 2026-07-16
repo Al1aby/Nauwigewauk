@@ -10,9 +10,18 @@
     .events-section { background: var(--paper); }
     .events-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; margin-top: 3rem; align-items: start; }
 
-    /* Calendar embed */
-    .calendar-embed-wrap { border: 1px solid var(--rule); box-shadow: 0 8px 24px rgba(17,31,62,0.1); background: #fff; }
-    .calendar-embed-wrap iframe { width: 100%; height: 600px; border: 0; display: block; }
+    /* Calendar widget */
+    .gcal-widget { border: 1px solid var(--rule); box-shadow: 0 8px 24px rgba(17,31,62,0.1); background: var(--cream); }
+    .gcal-event { display: grid; grid-template-columns: 72px 1fr; gap: 1.5rem; align-items: start; padding: 1.75rem 2rem; border-bottom: 1px solid var(--rule); transition: background 0.2s; }
+    .gcal-event:last-child { border-bottom: none; }
+    .gcal-event:hover { background: var(--gold-pale); }
+    .gcal-date { text-align: center; background: var(--navy-dark); padding: 0.75rem 0.5rem; color: #fff; }
+    .gcal-month { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-lt); display: block; }
+    .gcal-day { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700; line-height: 1; display: block; }
+    .gcal-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy-dark); font-weight: 700; margin-bottom: 0.35rem; }
+    .gcal-meta { font-size: 0.85rem; color: var(--muted); }
+    .gcal-empty, .gcal-error { padding: 2.5rem 2rem; text-align: center; color: var(--muted); font-family: 'Lora', serif; font-style: italic; }
+    .gcal-error a { color: var(--navy); font-style: normal; }
 
     .placeholder-notice {
       background: var(--gold-pale); border-left: 4px solid var(--gold);
@@ -59,12 +68,8 @@
 
     <div class="events-grid">
       <div>
-        <div class="calendar-embed-wrap reveal">
-          <iframe
-            src="https://calendar.google.com/calendar/embed?src=nauwigewaukcommunityclub%40gmail.com&ctz=America%2FMoncton&mode=AGENDA&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0"
-            title="Nauwigewauk Community Club events calendar"
-            frameborder="0" scrolling="no">
-          </iframe>
+        <div class="gcal-widget reveal" id="ncc-calendar-widget">
+          <div class="gcal-empty">Loading upcoming events…</div>
         </div>
       </div>
 
@@ -113,5 +118,11 @@
 </section>
 
 <script src="nav.js"></script>
+<script src="calendar-widget.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    loadCalendarWidget('ncc-calendar-widget');
+  });
+</script>
 </body>
 </html>
