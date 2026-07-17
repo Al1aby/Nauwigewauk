@@ -3,6 +3,16 @@
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nauwigewauk Community Club</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.nauwigewauk.ca/" />
+  <meta property="og:title" content="Nauwigewauk Community Club" />
+  <meta property="og:description" content="A volunteer-run community club serving Nauwigewauk and Darlings Island since 1948 — picnic shelter, playground, nature trails, and more." />
+  <meta property="og:image" content="https://www.nauwigewauk.ca/hero-picnic-shelter.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nauwigewauk Community Club" />
+  <meta name="twitter:description" content="A volunteer-run community club serving Nauwigewauk and Darlings Island since 1948 — picnic shelter, playground, nature trails, and more." />
+  <meta name="twitter:image" content="https://www.nauwigewauk.ca/hero-picnic-shelter.jpg" />
+  <meta name="description" content="A volunteer-run community club serving Nauwigewauk and Darlings Island since 1948 — picnic shelter, playground, nature trails, and more." />
   <link rel="icon" type="image/png" href="NCC_logo.png" />
   <link rel="stylesheet" href="style.css" />
   <style>
@@ -13,7 +23,6 @@
       overflow: hidden;
     }
     .hero-bg { position: absolute; inset: 0; z-index: 0; }
-    .hero-bg.photo-pending { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 70%); }
     .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block; }
     .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(17,31,62,0.88) 0%, rgba(17,31,62,0.55) 45%, rgba(17,31,62,0.15) 75%); }
     .hero-inner { position: relative; z-index: 1; max-width: 620px; padding: 5rem 2.5rem; }
@@ -97,12 +106,8 @@
     .testimonial-inner cite { font-style: normal; font-size: 0.85rem; letter-spacing: 0.05em; color: var(--gold-lt); font-weight: 600; }
 
 
-    /* shared photo-pending inner (reused pattern) */
+    /* shared photo-pending gradient background (used for sections still awaiting real photos) */
     .photo-pending { display: flex; align-items: center; justify-content: center; }
-    .photo-pending-inner { text-align: center; padding: 1.5rem; }
-    .photo-pending-icon { font-size: 2rem; display: block; margin-bottom: 0.75rem; opacity: 0.7; }
-    .photo-pending-inner p { font-family: 'Lora', serif; font-style: italic; color: rgba(255,255,255,0.55); font-size: 0.85rem; line-height: 1.5; }
-    .photo-pending-inner p span { font-size: 0.72rem; color: rgba(255,255,255,0.35); }
 
     @media (max-width: 900px) {
       .hero-inner { max-width: 100%; padding: 4rem 1.5rem; }
@@ -153,8 +158,8 @@
       <div class="notice-card reveal">
         <div class="notice-badge">📌</div>
         <h3>Announcements</h3>
-        <div class="notice-title">Annual General Meeting — April 12</div>
-        <p class="notice-body">All members are welcome to attend the AGM at the picnic shelter. Items include financial review, executive elections, and updates for the coming year.</p>
+        <div class="notice-title">Fall Fair — October 3rd</div>
+        <p class="notice-body">The NCC is hosting its annual Fall Fair again this year! Come out for games, local vendors, and a BBQ to celebrate our wonderful community.</p>
         <a href="news-events.html">More Information →</a>
         <div class="notice-dots"><span class="active"></span><span></span></div>
       </div>

@@ -56,7 +56,7 @@
   </div>
   <footer>
     <img src="NCC_logo.png" alt="NCC" />
-    <div class="footer-text">© 2024 Nauwigewauk Community Club Inc. · Route 100, Southern New Brunswick, Canada</div>
+    <div class="footer-text">© 2026 Nauwigewauk Community Club Inc. · Route 100, New Brunswick, Canada</div>
     <div class="footer-links">
       <a href="history.html">Our History</a>
       <a href="donate.html">Donate</a>
