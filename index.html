@@ -40,6 +40,7 @@
     .popular-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 3rem; align-items: start; }
     .popular-heading { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: var(--navy-dark); font-weight: 700; margin-bottom: 1.5rem; }
     .chunky-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .chunky-grid a:last-child:nth-child(odd) { grid-column: span 2; }
     .chunky-btn {
       display: flex; align-items: center; justify-content: center; text-align: center;
       background: var(--navy); color: #fff; text-decoration: none;
@@ -147,11 +148,11 @@
       <div class="reveal">
         <div class="popular-heading">Popular Pages and Services</div>
         <div class="chunky-grid">
-          <a href="facilities.html" class="chunky-btn">Picnic Shelter Rental</a>
+          <a href="facilities.html" class="chunky-btn">Facilities</a>
           <a href="nature-trail.html" class="chunky-btn">Nature Trail</a>
           <a href="history.html" class="chunky-btn">Our History</a>
-          <a href="photo-archive.html" class="chunky-btn">Photo Archive</a>
           <a href="executive.html" class="chunky-btn">Executive</a>
+          <a href="donate.html" class="chunky-btn">Donate</a>
           <a href="contact.html" class="chunky-btn">Contact Us</a>
         </div>
       </div>
