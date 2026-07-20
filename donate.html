@@ -67,7 +67,7 @@
   <div class="page-hero-inner">
     <div class="page-hero-kicker"><div class="page-hero-kicker-line"></div><span>Support the Club</span></div>
     <h1>Make a <em>Donation</em></h1>
-    <p class="page-hero-sub">Every contribution helps keep the grounds, trails, and programs running.</p>
+    <p class="page-hero-sub">Every contribution helps keep the grounds and trails running.</p>
   </div>
 </div>
 
@@ -92,6 +92,14 @@
       </div>
 
       <div class="reveal">
+        <div class="etransfer-box" style="margin-bottom: 1.5rem;">
+          <h3>Donate by PayPal</h3>
+          <p style="font-size:0.9rem; color:rgba(255,255,255,0.7); line-height:1.6; margin-bottom:1.5rem;">Give securely by card or PayPal account — no PayPal account required to pay by card as a guest.</p>
+          <div id="donate-button-container" style="text-align:center;">
+            <div id="donate-button"></div>
+          </div>
+        </div>
+
         <div class="etransfer-box">
           <h3>Donate by e-Transfer</h3>
           <ol class="etransfer-steps">
@@ -110,6 +118,22 @@
     </div>
   </div>
 </section>
+
+<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+<script>
+  PayPal.Donation.Button({
+    env: 'production',
+    hosted_button_id: 'RVA4NPNFHZU6S',
+    image: {
+      src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+      alt: 'Donate with PayPal button',
+      title: 'PayPal - The safer, easier way to pay online!',
+    },
+    onComplete: function (params) {
+      window.location.href = 'donate-thank-you.html';
+    },
+  }).render('#donate-button');
+</script>
 
 <section class="help-section">
   <div class="container">

@@ -7,9 +7,9 @@
     { href: 'news-events.html',  label: 'News & Events' },
     { href: 'facilities.html',   label: 'Facilities' },
     { href: 'nature-trail.html', label: 'Nature Trail' },
+    { href: 'donate.html',       label: 'Donate' },
     { href: 'photo-archive.html',label: 'Photo Archive' },
     { href: 'executive.html',    label: 'Executive' },
-    { href: 'donate.html',       label: 'Donate' },
     { href: 'contact.html',      label: 'Contact' },
   ];
 
